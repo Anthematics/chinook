@@ -1,0 +1,31 @@
+
+
+
+# Find the albums recorded by the artist Queen.#
+Artist.where("name = ?", 'Queen')
+Returns Artist ID 51
+Album.where("artist_id = ?", '51')
+# Count how many tracks belong to the media type "Protected MPEG-4 video file".#
+MediaType.where("name = ?", "Protected MPEG-4 video file")
+Track.where("media_type_id=?","3").count
+# Find the genre with the name "Hip Hop/Rap".#
+Genre.where("name=?", "Hip Hop/Rap")
+# Count how many tracks belong to the "Hip Hop/Rap" genre#
+Genre.where("name=?", "Hip Hop/Rap")
+Track.where("genre_id=?","17").count
+# Find the total amount of time required to listen to all the tracks in the database.#
+Track.sum("milliseconds")
+# Find the highest price of any track that has the media type "MPEG audio file".#
+MediaType.where("name =?" , "MPEG audio file")
+Tracktype= Track.where("media_type_id=?","1").order
+Tracktype.maximum("unit_price")
+
+
+Client.order("orders_count ASC").order("created_at DESC")
+# Find the name of the most expensive track that has the media type "MPEG audio file".#
+
+# Find the 2 oldest artists.#
+
+# Find the least expensive track that has the genre "Electronica/Dance".#
+
+# Find all "MPEG autio file" tracks in the genre "Electronica/Dance".
